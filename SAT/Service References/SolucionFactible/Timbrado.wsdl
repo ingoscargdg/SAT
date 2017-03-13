@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ax23="http://timbrado.ws.cfdi.solucionfactible.com/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://timbrado.ws.cfdi.solucionfactible.com" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://timbrado.ws.cfdi.solucionfactible.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>Timbrado</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema xmlns:ax24="http://timbrado.ws.cfdi.solucionfactible.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://timbrado.ws.cfdi.solucionfactible.com">
+      <xs:import namespace="http://timbrado.ws.cfdi.solucionfactible.com/xsd" />
+      <xs:element name="cancelar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="uuids" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="derCertCSD" nillable="true" type="xs:base64Binary" />
+            <xs:element minOccurs="0" name="derKeyCSD" nillable="true" type="xs:base64Binary" />
+            <xs:element minOccurs="0" name="contrasenaCSD" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:CFDICancelacion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="enviarSolicitudCancelacion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="solicitudCancelacion" nillable="true" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="enviarSolicitudCancelacionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:CFDICancelacion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="timbrar">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="cfdi" nillable="true" type="xs:base64Binary" />
+            <xs:element minOccurs="0" name="zip" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="timbrarResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:CFDICertificacion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="timbrarBase64">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="cfdiBase64" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="zip" type="xs:boolean" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="timbrarBase64Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:CFDICertificacion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelarViaCSDAlmacenado">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="rfcEmisor" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="uuids" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelarViaCSDAlmacenadoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:CFDICancelacion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelarPorNotaCredito">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="derCertCSD" nillable="true" type="xs:base64Binary" />
+            <xs:element minOccurs="0" name="derKeyCSD" nillable="true" type="xs:base64Binary" />
+            <xs:element minOccurs="0" name="contrasenaCSD" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelarPorNotaCreditoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:CFDIResultadoCertificacion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelarBase64">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="uuids" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="derCertCSDBase64" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="derKeyCSDBase64" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="contrasenaCSD" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="cancelarBase64Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax24:CFDICancelacion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://timbrado.ws.cfdi.solucionfactible.com/xsd">
+      <xs:complexType name="CFDICancelacion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="resultados" nillable="true" type="ax23:CFDIResultadoCancelacion" />
+          <xs:element minOccurs="0" name="status" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CFDIResultadoCancelacion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="status" type="xs:int" />
+          <xs:element minOccurs="0" name="statusUUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CFDICertificacion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="resultados" nillable="true" type="ax23:CFDIResultadoCertificacion" />
+          <xs:element minOccurs="0" name="status" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CFDIResultadoCertificacion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cadenaOriginal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="certificadoSAT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="cfdiTimbrado" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="fechaTimbrado" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="qrCode" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="selloSAT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="status" type="xs:int" />
+          <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="versionTFD" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="cancelarPorNotaCreditoRequest">
+    <wsdl:part name="parameters" element="ns:cancelarPorNotaCredito" />
+  </wsdl:message>
+  <wsdl:message name="cancelarPorNotaCreditoResponse">
+    <wsdl:part name="parameters" element="ns:cancelarPorNotaCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelarViaCSDAlmacenadoRequest">
+    <wsdl:part name="parameters" element="ns:cancelarViaCSDAlmacenado" />
+  </wsdl:message>
+  <wsdl:message name="cancelarViaCSDAlmacenadoResponse">
+    <wsdl:part name="parameters" element="ns:cancelarViaCSDAlmacenadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarSolicitudCancelacionRequest">
+    <wsdl:part name="parameters" element="ns:enviarSolicitudCancelacion" />
+  </wsdl:message>
+  <wsdl:message name="enviarSolicitudCancelacionResponse">
+    <wsdl:part name="parameters" element="ns:enviarSolicitudCancelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelarRequest">
+    <wsdl:part name="parameters" element="ns:cancelar" />
+  </wsdl:message>
+  <wsdl:message name="cancelarResponse">
+    <wsdl:part name="parameters" element="ns:cancelarResponse" />
+  </wsdl:message>
+  <wsdl:message name="timbrarBase64Request">
+    <wsdl:part name="parameters" element="ns:timbrarBase64" />
+  </wsdl:message>
+  <wsdl:message name="timbrarBase64Response">
+    <wsdl:part name="parameters" element="ns:timbrarBase64Response" />
+  </wsdl:message>
+  <wsdl:message name="timbrarRequest">
+    <wsdl:part name="parameters" element="ns:timbrar" />
+  </wsdl:message>
+  <wsdl:message name="timbrarResponse">
+    <wsdl:part name="parameters" element="ns:timbrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="cancelarBase64Request">
+    <wsdl:part name="parameters" element="ns:cancelarBase64" />
+  </wsdl:message>
+  <wsdl:message name="cancelarBase64Response">
+    <wsdl:part name="parameters" element="ns:cancelarBase64Response" />
+  </wsdl:message>
+  <wsdl:portType name="TimbradoPortType">
+    <wsdl:operation name="cancelarPorNotaCredito">
+      <wsdl:input wsaw:Action="urn:cancelarPorNotaCredito" message="ns:cancelarPorNotaCreditoRequest" />
+      <wsdl:output wsaw:Action="urn:cancelarPorNotaCreditoResponse" message="ns:cancelarPorNotaCreditoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelarViaCSDAlmacenado">
+      <wsdl:input wsaw:Action="urn:cancelarViaCSDAlmacenado" message="ns:cancelarViaCSDAlmacenadoRequest" />
+      <wsdl:output wsaw:Action="urn:cancelarViaCSDAlmacenadoResponse" message="ns:cancelarViaCSDAlmacenadoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarSolicitudCancelacion">
+      <wsdl:input wsaw:Action="urn:enviarSolicitudCancelacion" message="ns:enviarSolicitudCancelacionRequest" />
+      <wsdl:output wsaw:Action="urn:enviarSolicitudCancelacionResponse" message="ns:enviarSolicitudCancelacionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <wsdl:input wsaw:Action="urn:cancelar" message="ns:cancelarRequest" />
+      <wsdl:output wsaw:Action="urn:cancelarResponse" message="ns:cancelarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrarBase64">
+      <wsdl:input wsaw:Action="urn:timbrarBase64" message="ns:timbrarBase64Request" />
+      <wsdl:output wsaw:Action="urn:timbrarBase64Response" message="ns:timbrarBase64Response" />
+    </wsdl:operation>
+    <wsdl:operation name="timbrar">
+      <wsdl:input wsaw:Action="urn:timbrar" message="ns:timbrarRequest" />
+      <wsdl:output wsaw:Action="urn:timbrarResponse" message="ns:timbrarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelarBase64">
+      <wsdl:input wsaw:Action="urn:cancelarBase64" message="ns:cancelarBase64Request" />
+      <wsdl:output wsaw:Action="urn:cancelarBase64Response" message="ns:cancelarBase64Response" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TimbradoSoap11Binding" type="ns:TimbradoPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="cancelarPorNotaCredito">
+      <soap:operation soapAction="urn:cancelarPorNotaCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarViaCSDAlmacenado">
+      <soap:operation soapAction="urn:cancelarViaCSDAlmacenado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <soap:operation soapAction="urn:cancelar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSolicitudCancelacion">
+      <soap:operation soapAction="urn:enviarSolicitudCancelacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarBase64">
+      <soap:operation soapAction="urn:timbrarBase64" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrar">
+      <soap:operation soapAction="urn:timbrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarBase64">
+      <soap:operation soapAction="urn:cancelarBase64" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TimbradoSoap12Binding" type="ns:TimbradoPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="cancelarPorNotaCredito">
+      <soap12:operation soapAction="urn:cancelarPorNotaCredito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarViaCSDAlmacenado">
+      <soap12:operation soapAction="urn:cancelarViaCSDAlmacenado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <soap12:operation soapAction="urn:cancelar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSolicitudCancelacion">
+      <soap12:operation soapAction="urn:enviarSolicitudCancelacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarBase64">
+      <soap12:operation soapAction="urn:timbrarBase64" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrar">
+      <soap12:operation soapAction="urn:timbrar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarBase64">
+      <soap12:operation soapAction="urn:cancelarBase64" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TimbradoHttpBinding" type="ns:TimbradoPortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="cancelarPorNotaCredito">
+      <http:operation location="Timbrado/cancelarPorNotaCredito" />
+      <wsdl:input>
+        <mime:content part="cancelarPorNotaCredito" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelarPorNotaCredito" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarViaCSDAlmacenado">
+      <http:operation location="Timbrado/cancelarViaCSDAlmacenado" />
+      <wsdl:input>
+        <mime:content part="cancelarViaCSDAlmacenado" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelarViaCSDAlmacenado" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelar">
+      <http:operation location="Timbrado/cancelar" />
+      <wsdl:input>
+        <mime:content part="cancelar" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelar" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSolicitudCancelacion">
+      <http:operation location="Timbrado/enviarSolicitudCancelacion" />
+      <wsdl:input>
+        <mime:content part="enviarSolicitudCancelacion" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="enviarSolicitudCancelacion" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrarBase64">
+      <http:operation location="Timbrado/timbrarBase64" />
+      <wsdl:input>
+        <mime:content part="timbrarBase64" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="timbrarBase64" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timbrar">
+      <http:operation location="Timbrado/timbrar" />
+      <wsdl:input>
+        <mime:content part="timbrar" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="timbrar" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarBase64">
+      <http:operation location="Timbrado/cancelarBase64" />
+      <wsdl:input>
+        <mime:content part="cancelarBase64" type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="cancelarBase64" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Timbrado">
+    <wsdl:port name="TimbradoHttpsSoap11Endpoint" binding="ns:TimbradoSoap11Binding">
+      <soap:address location="https://solucionfactible.com/ws/services/Timbrado.TimbradoHttpsSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="TimbradoHttpsSoap12Endpoint" binding="ns:TimbradoSoap12Binding">
+      <soap12:address location="https://solucionfactible.com/ws/services/Timbrado.TimbradoHttpsSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="TimbradoHttpsEndpoint" binding="ns:TimbradoHttpBinding">
+      <http:address location="https://solucionfactible.com/ws/services/Timbrado.TimbradoHttpsEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

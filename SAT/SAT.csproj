@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{290A63EF-8F0D-4CD8-A5F7-97819792C1F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAT</RootNamespace>
+    <AssemblyName>SAT</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CFDI\3.3\CfdiRelacionado.cs" />
+    <Compile Include="CFDI\3.3\CfdiRelacionados.cs" />
+    <Compile Include="CFDI\3.3\Complemento.cs" />
+    <Compile Include="CFDI\3.3\Comprobante.cs" />
+    <Compile Include="CFDI\3.3\Concepto.cs" />
+    <Compile Include="CFDI\3.3\CuentaPredial.cs" />
+    <Compile Include="CFDI\3.3\Digital.cs" />
+    <Compile Include="CFDI\3.3\DomicilioFiscal.cs" />
+    <Compile Include="CFDI\3.3\Emisor.cs" />
+    <Compile Include="CFDI\3.3\ExpedidoEn.cs" />
+    <Compile Include="CFDI\3.3\IDireccion.cs" />
+    <Compile Include="CFDI\3.3\ImpuestosComprobante.cs" />
+    <Compile Include="CFDI\3.3\Impuestos.cs" />
+    <Compile Include="CFDI\3.3\InformacionAduanera.cs" />
+    <Compile Include="CFDI\3.3\Parte.cs" />
+    <Compile Include="CFDI\3.3\Receptor.cs" />
+    <Compile Include="CFDI\3.3\Retencion.cs" />
+    <Compile Include="CFDI\3.3\Traslado.cs" />
+    <Compile Include="CFDI\ComercioExterior\1.1\ComercioExterior.cs" />
+    <Compile Include="CFDI\ComercioExterior\1.1\DescripcionesEspecificas.cs" />
+    <Compile Include="CFDI\ComercioExterior\1.1\Destinatario.cs" />
+    <Compile Include="CFDI\ComercioExterior\1.1\Domicilio.cs" />
+    <Compile Include="CFDI\ComercioExterior\1.1\Emisor.cs" />
+    <Compile Include="CFDI\ComercioExterior\1.1\Mercancia.cs" />
+    <Compile Include="CFDI\ComercioExterior\1.1\Propietario.cs" />
+    <Compile Include="CFDI\ComercioExterior\1.1\Receptor.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Binary.cs" />
+    <Compile Include="Util\Common.cs" />
+    <Compile Include="Contabilidad\AuxiliarCuenta\1.1\AuxiliarCtas.cs" />
+    <Compile Include="Contabilidad\AuxiliarCuenta\1.1\Cuenta.cs" />
+    <Compile Include="Contabilidad\AuxiliarCuenta\1.1\DetalleAux.cs" />
+    <Compile Include="Contabilidad\AuxiliarFolios\1.1\CompNal.cs" />
+    <Compile Include="Contabilidad\AuxiliarFolios\1.1\DetAuxFol.cs" />
+    <Compile Include="Contabilidad\AuxiliarFolios\1.1\RepAuxFol.cs" />
+    <Compile Include="Contabilidad\Balanza\1.1\Balanza.cs" />
+    <Compile Include="Contabilidad\Balanza\1.1\Cta.cs" />
+    <Compile Include="Contabilidad\Catalogo\1.1\Catalogo.cs" />
+    <Compile Include="Contabilidad\Catalogo\1.1\Cta.cs" />
+    <Compile Include="Contabilidad\Polizas\1.1\Cheque.cs" />
+    <Compile Include="Contabilidad\Polizas\1.1\CompNal.cs" />
+    <Compile Include="Contabilidad\Polizas\1.1\CompExt.cs" />
+    <Compile Include="Contabilidad\Polizas\1.1\OtrMetodoPago.cs" />
+    <Compile Include="Contabilidad\Polizas\1.1\Poliza.cs" />
+    <Compile Include="Contabilidad\Polizas\1.1\Polizas.cs" />
+    <Compile Include="Contabilidad\Polizas\1.1\Transaccion.cs" />
+    <Compile Include="Contabilidad\Polizas\1.1\Transferencia.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Service References\SolucionFactible\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.cancelarBase64Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.cancelarPorNotaCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.cancelarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.cancelarViaCSDAlmacenadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.CFDICancelacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.CFDICertificacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.CFDIResultadoCertificacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.enviarSolicitudCancelacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.timbrarBase64Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\SAT.SolucionFactible.timbrarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SolucionFactible\Timbrado.wsdl" />
+    <None Include="XSD\cfdv33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XSD\ComercioExterior11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SolucionFactible\configuration91.svcinfo" />
+    <None Include="Service References\SolucionFactible\configuration.svcinfo" />
+    <None Include="Service References\SolucionFactible\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="XSLT\cadenaoriginal_3_3.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SolucionFactible\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CFDI\detallista\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

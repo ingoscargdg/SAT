@@ -1,0 +1,6 @@
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\bin\Debug\SAT.dll
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\bin\Debug\SAT.pdb
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\obj\Debug\SAT.dll
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\obj\Debug\SAT.pdb
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\bin\Debug\SAT.dll.config
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\obj\Debug\SAT.csprojResolveAssemblyReference.cache
