@@ -1,0 +1,8 @@
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\Test\bin\Debug\Test.exe.config
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\Test\bin\Debug\Test.exe
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\Test\bin\Debug\Test.pdb
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\Test\obj\Debug\Test.exe
+C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\Test\obj\Debug\Test.pdb
