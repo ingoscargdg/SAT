@@ -70,6 +70,25 @@
     <Compile Include="CFDI\ComercioExterior\1.1\Mercancia.cs" />
     <Compile Include="CFDI\ComercioExterior\1.1\Propietario.cs" />
     <Compile Include="CFDI\ComercioExterior\1.1\Receptor.cs" />
+    <Compile Include="CFDI\Nomina\1_2\AccionesOTitulos.cs" />
+    <Compile Include="CFDI\Nomina\1_2\CompensacionSaldosAFavor.cs" />
+    <Compile Include="CFDI\Nomina\1_2\Deduccion.cs" />
+    <Compile Include="CFDI\Nomina\1_2\Deducciones.cs" />
+    <Compile Include="CFDI\Nomina\1_2\Emisor.cs" />
+    <Compile Include="CFDI\Nomina\1_2\EntidadSNCF.cs" />
+    <Compile Include="CFDI\Nomina\1_2\HorasExtra.cs" />
+    <Compile Include="CFDI\Nomina\1_2\Incapacidad.cs" />
+    <Compile Include="CFDI\Nomina\1_2\Incapacidades.cs" />
+    <Compile Include="CFDI\Nomina\1_2\JubilacionPensionRetiro.cs" />
+    <Compile Include="CFDI\Nomina\1_2\Nomina.cs" />
+    <Compile Include="CFDI\Nomina\1_2\OtroPago.cs" />
+    <Compile Include="CFDI\Nomina\1_2\OtrosPagos.cs" />
+    <Compile Include="CFDI\Nomina\1_2\Percepcion.cs" />
+    <Compile Include="CFDI\Nomina\1_2\Percepciones.cs" />
+    <Compile Include="CFDI\Nomina\1_2\Receptor.cs" />
+    <Compile Include="CFDI\Nomina\1_2\SeparacionIndemnizacion.cs" />
+    <Compile Include="CFDI\Nomina\1_2\SubContratacion.cs" />
+    <Compile Include="CFDI\Nomina\1_2\SubsidioAlEmpleo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

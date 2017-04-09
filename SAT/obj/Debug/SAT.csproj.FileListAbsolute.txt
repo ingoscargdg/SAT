@@ -4,3 +4,9 @@ C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\obj\Debug\SAT.dll
 C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\obj\Debug\SAT.pdb
 C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\bin\Debug\SAT.dll.config
 C:\Users\PERI\Desktop\ProyectosWeb\Dlls\SAT\SAT\obj\Debug\SAT.csprojResolveAssemblyReference.cache
+C:\Users\Server\Desktop\Codigos\SAT\SAT\bin\Debug\SAT.dll.config
+C:\Users\Server\Desktop\Codigos\SAT\SAT\bin\Debug\SAT.dll
+C:\Users\Server\Desktop\Codigos\SAT\SAT\bin\Debug\SAT.pdb
+C:\Users\Server\Desktop\Codigos\SAT\SAT\obj\Debug\SAT.csprojResolveAssemblyReference.cache
+C:\Users\Server\Desktop\Codigos\SAT\SAT\obj\Debug\SAT.dll
+C:\Users\Server\Desktop\Codigos\SAT\SAT\obj\Debug\SAT.pdb

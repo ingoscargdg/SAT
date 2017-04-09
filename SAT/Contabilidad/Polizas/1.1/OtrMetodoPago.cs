@@ -26,7 +26,7 @@ namespace SAT.Contabilidad.Polizas._1._1
         public string Moneda { get; set; }
 
         [XmlAttribute("TipCamb", DataType = "decimal")]
-        public decimal TipCamb { get; set; }
+        public decimal TipCamb   { get; set; }
 
     }
 }
